@@ -1,0 +1,31 @@
+package Sorting;
+import java.util.*;
+
+
+public class Bubblesort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = {5,4,3,2,1};
+		bubble(arr);
+		System.out.println(Arrays.toString(arr));
+      
+	}
+	static void bubble (int arr[]) {
+		
+		for(int i=0;i<arr.length;i++) {
+			int tem=0;
+			for(int j =1;j<arr.length-i;j++) {
+				if(arr[j] < arr[j-1]) {
+					int temp= arr[j];
+					arr[j]=arr[j-1];
+					arr[j-1]= temp;
+					tem=1;
+				}	
+			}
+			if(tem==0) {
+				break;
+			}
+		}
+	}
+}
